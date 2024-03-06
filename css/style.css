@@ -17,13 +17,27 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 12px;
 }
 header .logo{
     display: flex;
     align-items: center;
+    gap: 7px;
+}
+header .logo img{
+    width: 30px;
+    height: 30px;
+}
+header .hamburger img{
+    width: 25px;
+    height: 25px;
 }
 header .h2{
     width: 200px;
+    font-size: 0.8em;
+}
+header .logo h2{
+    letter-spacing: 2px;
 }
 /* header .h2 img{
     display: flex;
