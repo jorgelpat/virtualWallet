@@ -2,7 +2,23 @@
     font-family: "SF-Pro-Text-Regular";
     src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf);
 }
+@font-face {
+    font-family: "SF-Pro-Text-Bold";
+    src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Bold.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Text-Semibold";
+    src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Semibold.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Text-Heavy.otf";
+    src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Heavy.otf);
+}
 :root{
     --color-primary: #00DDA3;
     --color-secundary: #33404F;
+    --color-ternario: #fff;
+    --color-cuarto:#B5C5C3;
+    --color-cuaternario:gray;
+    --color-shadow-transparent:0px 0px 10px rgba(0, 0, 0, 0.216)
 }
