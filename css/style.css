@@ -39,14 +39,17 @@ header .h2{
 header .logo h2{
     letter-spacing: 2px;
 }
-/* header .h2 img{
-    display: flex;
-    
-} */
+
 .hamburger{
     display: flex;
     /* justify-content: flex-end; */
 }
+.container2{
+    height: 831px;
+    display: flex;
+}
+
+
 .menu{
     background: var(--color-secundary);
     width: 100%;
