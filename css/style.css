@@ -1,78 +1,264 @@
 @import url(variables.css);
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
 
-.container{
+/*Encabezado del aplicativo*/
+.header {
+    display: grid;
+    /* background: red; */
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+                        "logo burger";
+}
+
+.logo,
+.burger {
     width: 100%;
-    height: 100svh;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    grid-area: logo;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-family: "SF-Pro-Text-Bold";
+}
+
+.burger {
+    grid-area: burger;
+    justify-content: flex-end;
+}
+
+.logo img,
+.burger img {
+    width: 30px;
+}
+
+/* Contenido principal del home */
+.container {
+    display: grid;
+    padding: 10px;
+    grid-gap: 25px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.banner {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
-header{
+
+/* Inicio de la session Investing Tips */
+.carusel__title,
+.banner__title {
+    padding: 10px 0;
+}
+
+.carusel__title h3,
+.banner__title h3 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: "SF-Pro-Text-Bold";
+}
+
+.banner__publicidad {
+    width: 100%;
+    height: 140px;
+    /* background: #00388b; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__logo {
+    /* background: greenyellow; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
 }
-header .logo{
+
+.banner__logo img {
+    /* padding: 15px; */
+    height: 130px;
+    /* padding-top: 8px; */
+}
+
+.banner__card {
+    width: 90vw;
+    height: 130px;
+    background: var(--color-ternario);
+    overflow: hidden;
+    border-radius: 20px;
     display: flex;
-    align-items: center;
-    gap: 7px;
+    justify-content: center;
+    box-shadow: var(--color-shado-tranparent);
 }
-header .logo img{
-    width: 30px;
-    height: 30px;
+
+.banner__data {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 14px;
+    /* text-align: center; */
+    position: relative;
 }
-header .hamburger img{
+
+.banner__data strong {
+    font-family: "SF-Pro-Text-Bold";
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+
+.banner__data small {
+    font-family: "SF-Pro-Text-Regular";
+    color: grey;
+    margin-top: 7px;
+
+}
+
+.banner__close {
+    position: absolute;
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-ternario);
     width: 25px;
     height: 25px;
-}
-header .h2{
-    width: 200px;
-    font-size: 0.8em;
-}
-header .logo h2{
-    letter-spacing: 2px;
+    top: 5px;
+    right: 10px;
+    border-radius: 100%;
+    margin-top: 7px;
+    margin-right: 3px;
 }
 
-.hamburger{
+.banner__close i {
+
+    font-size: 1.5rem;
+}
+
+.banner__more {
+    width: 60%;
+    height: 25%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 18px;
+    font-family: "SF-Pro-Text-Bold";
+    font-size: .6rem;
+    color: var(--color-ternario);
+    padding: 5px;
+
+    background: var(--color-primary);
+}
+
+/* ********************************************* */
+[data-card]::before {
+    content: attr(data-card);
+    color: var(--color-primary);
+    font-family: "SF-Pro-Text-Bold";
+}
+
+.carusel__card {
+    width: 95vw;
     display: flex;
-    /* justify-content: flex-end; */
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: auto;
+    align-items: center;
+    gap: 5px;
+    margin: 15px 0;
 }
-.container2{
-    height: 831px;
+
+.carusel__img:nth-child(1), .carusel__img:nth-child(3), .carusel__img:nth-child(5) {
+    min-width: 55%;
+    min-height: 40vh;
+    background: url(../storage/img/card.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-ternario);
+}
+.carusel__img:nth-child(2), .carusel__img:nth-child(4) {
+    min-width: 55%;
+    min-height: 40vh;
+    background: url(../storage/img/cardLoad.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-ternario);
+}
+
+.carusel__img small
+.carusel__img img {
+    position: absolute;
+}
+
+.carusel__img small {
+    top: 20px;
+    right: 20px;
+    padding-left: 80px;
 }
 
 
-.menu{
+.carusel__img img {
+    left: 20px;
+    bottom: 20px;
+}
+
+/* ********************************************* */
+/*Menu Movil*/
+.menu {
     background: var(--color-secundary);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.menu ul {
     width: 100%;
     height: 50px;
-}
-.menu ul{
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-.menu ul li{
+
+.menu ul li {
     list-style: none;
 }
-.menu ul li a{
+
+.menu ul li a {
     text-decoration: none;
 }
-.menu ul li a i{
+
+.menu ul li a i {
     font-size: 25px;
     color: var(--color-icon);
 }
-.menu ul li a i:hover{
+
+.menu ul li a i:hover {
     color: var(--color-primary);
     transition: color .3s ease-in-out;
 }

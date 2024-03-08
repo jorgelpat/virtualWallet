@@ -6,4 +6,6 @@
     --color-primary: #00DDA3;
     --color-secundary: #33404F;
     --color-icon: #fff;
+    --color-ternario: #fff;
+    --color-shado-tranparent: 0px 0px 10px rgba(0, 0, 0, 0.216);
 }
