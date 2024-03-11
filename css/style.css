@@ -5,3 +5,24 @@
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
+body{
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+.header_balance{
+    display: grid;
+    padding: 6px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-template-areas: 
+    "logo burger";
+}
+.logo_balance  {
+    grid-area: logo;
+    gap: 12px;
+}
+.logo_balance img{
+    width: 30px;
+}
