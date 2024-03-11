@@ -16,20 +16,17 @@
     object-fit: cover;
 }
 .profile{
-    /* background-color: red; */
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 .profile_balance{
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 10px;
 }
 .profile_titule{
-    /* background: blue; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -111,26 +108,23 @@ progress[value]::-moz-progress-bar {
     border-radius: 10em;
     background: var(--color);
 }
-.activities_title h3{
+.activities_title h3
+.transactions_title h3{
     font-size: 1.4rem;
     text-transform: capitalize;
     font-family: "SF-Pro-Text-Bold";
 
+
 }
+
 .profile_activities{
     background: var(--color-ternario);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 20px 10px;
-    position: absolute;
-    /* z-index: -5; */
-    bottom: 50px;
-    height: 60vh;
-    /* transition: height .3s ease-out; */
+    height: 100vh;
+    text-transform: capitalize;
 }
-/* .profile_activities:active{
-    height: 85vh;
-} */
 .activities_carusel_card{
     width: 95vw;
     display: flex;
@@ -149,24 +143,74 @@ progress[value]::-moz-progress-bar {
     background-color: var(--color-ternario);
     border-radius: 10px;
     box-shadow: var(--color-shadow-transparent);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--color-secundary);
     margin: 15px 0;
+    flex-wrap: wrap;
 }
 .activities_carusel_img small,
 .carusel_img h4{
     position: absolute;
 }
-.activities_carusel_img i{
-    font-size: 2.5em;
+.activities_carusel_img img{
+    width: 25px;
+    /* font-size: 2.5em; */
 }
-.activities_carusel_img h4{
-    bottom: 20px;
+
+.transactions{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.transaction_balance{
+    background: rgb(184, 184, 196);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 55vh;
+    overflow-y: scroll;
+}
+.transaction_carusel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.transactions_description{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.transaction_up,
+.transaction_down{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 40px;
+}
+.transaction_up i{
+    color: var(--color-primary);
+    font-size: 1.8em;
+}
+.transaction_down i{
+    color: var(--color-secundary);
+    font-size: 1.8em;
+}
+
+.transactions_description div p,
+.transactions_value p{
+    font-family: "SF-Pro-Text-Semibold";
+    text-transform: capitalize;
+}
+.transactions_description div small,
+.transactions_value small{
+    display: flex;
+    justify-content: end;
+    font-family: "SF-Pro-Text-Light";
+    text-transform: capitalize;
+    color: var(--color-cuarto);
 }
