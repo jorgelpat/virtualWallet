@@ -5,12 +5,12 @@
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
-.banner{
+.banner_profile{
     background: var(--color-secundary);
     position: absolute;
     z-index: -10;
 }
-.banner img{
+.banner_profile img{
     width: 100%;
     height: 120vh;
     object-fit: cover;
