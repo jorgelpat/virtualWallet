@@ -214,3 +214,36 @@ progress[value]::-moz-progress-bar {
     text-transform: capitalize;
     color: var(--color-cuarto);
 }
+.menu_profile {
+    background: var(--color-secundary);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.menu_profile ul {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_profile ul li {
+    list-style: none;
+}
+
+.menu_profile ul li a {
+    text-decoration: none;
+}
+
+.menu_profile ul li a i {
+    font-size: 25px;
+    color: var(--color-icon);
+}
+
+.menu_profile ul li a i:hover {
+    color: var(--color-primary);
+    transition: color .3s ease-in-out;
+}
